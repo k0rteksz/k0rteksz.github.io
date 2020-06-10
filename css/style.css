@@ -26,16 +26,23 @@ h1 {
 }
 .links {
     background-color: crimson;
-    margin: 50px;
+    font-style: bold;
+    font-family: "Roboto" sans-serif;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-    overflow: hidden;
     border:1px solid black; 
-    padding: 10px;
-    border-radius: 40px;  
+    padding: 10px 9%;  
     box-shadow: brown 3px 3px 10px;
+    width: auto;
+    overflow: auto;
+
 }
 .linksHead {
-    position: fixed;
-    top: 10%
-    left: 10%
+    margin-left: auto;
+    margin-right: auto;
+}
+.kepek {
+    position: ;
+    right: auto;
 }
