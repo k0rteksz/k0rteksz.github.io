@@ -33,5 +33,9 @@ h1 {
     padding: 10px;
     border-radius: 40px;  
     box-shadow: brown 3px 3px 10px;
-    position: relative;
+}
+.linksHead {
+    position: fixed;
+    top: 10%
+    left: 10%
 }
