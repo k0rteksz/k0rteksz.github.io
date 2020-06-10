@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+
+.content {
+    font-family: "Roboto", sans-serif;
+    color: lightgreen;
+    text-align: justify;
+    font-size: 24px;    
+}
+
+.header {
+    font-family: "Opensans", sans-serif;
+    color: brown;
+    text-align: left;
+    font-size: 30px;
+}
