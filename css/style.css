@@ -1,48 +1,74 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
 
+html {
+    background-color: yellow;
+    font-family: "Roboto" sans-serif;
+}
+
+
+
+
+.oldal {
+    background-color: aliceblue;
+    margin: -10px 200px 100px;
+    padding: 5px 10px;
+    
+}
+
+.linksHead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a:link, a:visited {
+    background-color: #f44336;
+    color: white;
+    width: 18%;
+    margin: auto;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  a:hover, a:active {
+    background-color: red;
+  }
+
 .content {
     font-family: "Roboto", sans-serif;
     color: rgb(7, 90, 7);
     text-align: justify;
     font-size: 14px;
-}
+    margin: 10px;
+    overflow: auto;
+    }
 
 .PromoHeader {
     font-family: "Opensans", sans-serif;
     color: brown;
     text-align: left;
     font-size: 20px;
+    margin: 10px;
 }
 h1 {
     font-family: "Opensans", sans-serif;
-    color: green
+    color: brown
 }
 .akciok {
     background-color: rgb(223, 165, 117);
     margin:20px;
+    padding: 10px 10px;
     border:1px solid black; 
-    border-radius: 40px;  
+    border-radius: 10px;  
     box-shadow: brown 3px 3px 10px;
 }
-.links {
-    background-color: crimson;
-    font-style: bold;
-    font-family: "Roboto" sans-serif;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    border:1px solid black; 
-    padding: 10px 9%;  
-    box-shadow: brown 3px 3px 10px;
-    width: auto;
-    overflow: auto;
 
-}
-.linksHead {
-    margin-left: auto;
-    margin-right: auto;
-}
+
 .kepek {
-    position: ;
-    right: auto;
+    overflow: auto;
+    margin: 0 10px;
+    float: right;
+    
 }
