@@ -58,6 +58,7 @@ h1 {
     color: brown;
     text-align: center;
     overflow: auto;
+    font-size: 200%;
 }
 h2 {
     font-family: "Roboto" sans-serif;
