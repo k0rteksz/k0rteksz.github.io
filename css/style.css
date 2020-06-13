@@ -60,7 +60,7 @@ h1 {
     overflow: auto;
 }
 #index {
-    font-size:"150%";
+    size:"150%";
 }
 h2 {
     font-family: "Roboto" sans-serif;
@@ -92,7 +92,7 @@ h2 {
 
 table,
     th {
-        text-align: center;
+        text-align: left;
         font-size: large;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         color: rgb(7, 189, 7);
