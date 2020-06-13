@@ -54,7 +54,9 @@ a:link, a:visited {
 }
 h1 {
     font-family: "Opensans", sans-serif;
-    color: brown
+    color: brown;
+    text-align: center;
+    overflow: auto;
 }
 .akciok {
     background-color: rgb(223, 165, 117);
@@ -71,4 +73,51 @@ h1 {
     margin: 0 10px;
     float: right;
     
+}
+
+.etlap {
+    width: 100%;
+    border: none;
+}
+
+table,
+    th {
+        text-align: center;
+        font-size: large;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: rgb(7, 189, 7);
+        font-style: italic;
+        
+    }
+    td {
+        width: 50%;
+        text-align: left;
+        font-size: medium;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: green;
+        font-style: normal;
+    }
+
+tbody tr:nth-child(even)
+  {
+    background-color: burlywood;
+  }
+  tbody tr:nth-child(odd)
+  {
+    background-color: rgb(182, 148, 104);
+  }
+  tbody col:first-child (1) {
+      width: 50%;
+      
+  }
+  
+  tbody {
+      text-align: left;
+  }
+  table,th,td
+{
+  border-collapse: collapse;
+}
+.jobbikon {
+    text-align: right;
 }
