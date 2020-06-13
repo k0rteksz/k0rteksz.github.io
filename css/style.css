@@ -128,8 +128,7 @@ tbody tr:nth-child(even)
   tbody {
       text-align: left;
   }
-  table,th,td
-{
+table,th,td {
   border-collapse: collapse;
 }
 .jobbikon {
@@ -138,4 +137,8 @@ tbody tr:nth-child(even)
 
 .product {
     width: 25px;
+}
+
+.form-group:active, .form-group:hover {
+ 
 }
