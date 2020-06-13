@@ -3,6 +3,7 @@
 html {
     background-color: yellow;
     font-family: "Roboto" sans-serif;
+    color: green;
 }
 
 
@@ -56,6 +57,12 @@ h1 {
     font-family: "Opensans", sans-serif;
     color: brown;
     text-align: center;
+    overflow: auto;
+}
+h2 {
+    font-family: "Roboto" sans-serif;
+    color: brown;
+    text-align: justify;
     overflow: auto;
 }
 .akciok {
