@@ -70,7 +70,6 @@ h2 {
     font-family: "Roboto" sans-serif;
     color: brown;
     text-align: justify;
-    overflow: auto;
 }
 .akciok {
     background-color: rgb(223, 165, 117);
@@ -79,6 +78,7 @@ h2 {
     border:1px solid black; 
     border-radius: 10px;  
     box-shadow: brown 3px 3px 10px;
+    
 }
 
 
