@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+    <link   rel="stylesheet" href="../lib/bootstrap-4.5.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <title>Nagyfalat</title>
 </head>
@@ -19,60 +20,67 @@
         </div>
         <div class="container">
             <form>
-            <div class="form-group">
-                <label for="name">Név: *</label>
-                <input id="name" type="text" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="email">E-mail cím: *</label>
-                <input id="email" type="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="address">Cím: *</label>
-                <input id="address" type="text" name="address" required>
-            </div>
-            <div class="form-group">
-                <label for="comment">Megjegyzés</label>
-                <textarea id="comment" name="comment" rows="5"></textarea>
-            </div>
-            
-            <span>Extra feltét</span>
-            <div class="form-group">
-                <input id="cheese" name="extra" type="checkbox" value="0">
-                <label for="cheese">Sajt</label>
-            </div>
-            <div class="form-group">
-                <input id="tomato" name="extra" type="checkbox" value="300">
-                <label for="tomato">Paradicsom</label>
-            </div>
-            <div class="form-group">
-                <input id="onion" name="extra" type="checkbox" value="600">
-                <label for="onion">Hagyma</label>
-            </div>
-            <div class="form-group">
-                <input id="bacon" name="extra" type="checkbox" value="900">
-                <label for="bacon">Bacon</label>
-            </div>
-            <div class="form-group">
-                <input id="jalapeno" name="extra" type="checkbox" value="1200">
-                <label for="jalapeno">Jalapeno</label>
-            </div>
-            <div>
-            <label for="sauce">Szósz:</label>
-            <select id="sauce" name="sauce">
-                <option value="ketcup">Ketchup</option>
-                <option value="mustard">Mustár</option>
-                <option value="bbq">BBQ</option>
-                <option value="chili">Csípős</option>
-                <option value="sour">Édes-savanyú</option>
-            </select>
-            </div>
-            <div>
-                <label for="count">Mennyiség</label>
-            <input name="count" type="number" min="1" max="10">
-        </div>
-            
-        </form>
+                <fieldset>
+                    <legend>Személyes adatok</legend>
+                    <div class="form-group">
+                        <label for="name">Név: *</label>
+                        <input id="name" type="text" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail cím: *</label>
+                        <input id="email" type="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Cím: *</label>
+                        <input id="address" type="text" name="address" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="comment">Megjegyzés</label>
+                        <textarea id="comment" name="comment" rows="5"></textarea>
+                    </div>
+                </fieldset>
+                
+                <fieldset>
+                    <legend>Termék adatok</legend>
+                    <span>Extra feltét:</span>
+                    <div class="form-group">
+                        <input id="cheese" name="cheese" type="checkbox" value="300">
+                        <label for="cheese">sajt</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="bacon" name="bacon" type="checkbox" value="400">
+                        <label for="bacon">bacon</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="double-meat" name="double-meat" type="checkbox" value="1000">
+                        <label for="double-meat">dupla hús</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="cheesAndBacon" name="cheesAndBacon" type="checkbox" value="700">
+                        <label for="cheesAndBacon">sajt én bacon együtt</label>
+                    </div>
+                    <div class="form-group">
+                        <input id="cheessAndDouble" name="cheessAndDouble" type="checkbox" value="1300">
+                        <label for="cheessAndDouble">sajt és dupla hús együtt</label>
+                    </div>
+                    <div>
+                        <label for="sauce">Szósz:</label>
+                        <select id="sauce" name="sauce">
+                            <option value="standard">hagyományos</option>
+                            <option value="hot" value="100">csípős</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="count">Mennyiség</label>
+                        <input name="count" type="number" min="1" max="10">
+                    </div>
+                </fieldset>
+                <div class="form-group">
+                    <button>Rendelés leadása</button>
+                </div>
+
+
+            </form>
         </div>
 
 
