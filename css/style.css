@@ -143,4 +143,10 @@ table,th,td {
     width: 25px;
 }
 
+#value {
+    color: green;
+}
 
+#order {
+    color: green;
+}
