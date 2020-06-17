@@ -51,30 +51,30 @@
                         </div>
                         <span>Extra feltét:</span>
                         <div class="form-check">
-                            <input class="form-check-input" id="cheese" type="checkbox" value="300">
-                            <label class="form-check-label" for="cheese" name=extra>sajt</label>
+                            <input class="form-check-input" name="extra" id="cheese" type="checkbox" value="300">
+                            <label class="form-check-label" for="cheese" >sajt</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" id="bacon" type="checkbox" value="400">
-                            <label class="form-check-label" for="bacon" name=extra>bacon</label>
+                            <input class="form-check-input" name="extra" id="bacon" type="checkbox" value="400">
+                            <label class="form-check-label" for="bacon" >bacon</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" id="double-meat" type="checkbox" value="1000">
-                            <label class="form-check-label" for="double-meat" name=extra>dupla hús</label>
+                            <input class="form-check-input" name="extra" id="double-meat" type="checkbox" value="1000">
+                            <label class="form-check-label" for="double-meat" >dupla hús</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" id="cheesAndBacon" type="checkbox" value="700">
-                            <label class="form-check-label" for="cheesAndBacon" name=extra>sajt én bacon együtt</label>
+                            <input class="form-check-input" name="extra" id="cheesAndBacon" type="checkbox" value="700">
+                            <label class="form-check-label" for="cheesAndBacon" >sajt én bacon együtt</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" id="cheessAndDouble" type="checkbox" value="1300">
-                            <label class="form-check-label" for="cheessAndDouble" name=extra>sajt és dupla hús együtt</label>
+                            <input class="form-check-input" name="extra" id="cheessAndDouble" type="checkbox" value="1300">
+                            <label class="form-check-label" for="cheessAndDouble" >sajt és dupla hús együtt</label>
                         </div>
                         <div>
                             <label for="sauce">Szósz:</label>
                             <select class="custom-select" id="sauce" name="sauce">
                                 <option selected>Válassz szószt!</option>
-                                <option value="standard">hagyományos</option>
+                                <option value="standard" value="0">hagyományos</option>
                                 <option value="hot" value="100">csípős</option>
                             </select>
                         </div>
@@ -95,7 +95,7 @@
                             </select>
                         </div>
                     </div>
-                    <div>
+                    <div class="form-group">
                          A rendelés értéke:<span class="show-price"></span> Ft
                     <button onclick="calcPrice()" type="button" class="btn btn-primary">Rendelés leadása</button>
                     </div>
