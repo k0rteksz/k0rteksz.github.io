@@ -64,6 +64,8 @@ h1 {
     color: brown;
     text-align: center;
     overflow: auto;
+    font-size: 30px;
+    font-size: 3.5vw;
 }
 #index {
     size:"150%";
