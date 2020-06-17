@@ -52,23 +52,23 @@
                         <span>Extra feltét:</span>
                         <div class="form-check">
                             <input class="form-check-input" id="cheese" type="checkbox" value="300">
-                            <label class="form-check-label" for="cheese">sajt</label>
+                            <label class="form-check-label" for="cheese" name=extra>sajt</label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" id="bacon" type="checkbox" value="400">
-                            <label class="form-check-label" for="bacon">bacon</label>
+                            <label class="form-check-label" for="bacon" name=extra>bacon</label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" id="double-meat" type="checkbox" value="1000">
-                            <label class="form-check-label" for="double-meat">dupla hús</label>
+                            <label class="form-check-label" for="double-meat" name=extra>dupla hús</label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" id="cheesAndBacon" type="checkbox" value="700">
-                            <label class="form-check-label" for="cheesAndBacon">sajt én bacon együtt</label>
+                            <label class="form-check-label" for="cheesAndBacon" name=extra>sajt én bacon együtt</label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" id="cheessAndDouble" type="checkbox" value="1300">
-                            <label class="form-check-label" for="cheessAndDouble">sajt és dupla hús együtt</label>
+                            <label class="form-check-label" for="cheessAndDouble" name=extra>sajt és dupla hús együtt</label>
                         </div>
                         <div>
                             <label for="sauce">Szósz:</label>
@@ -92,23 +92,21 @@
                                 <option value="8">8</option>
                                 <option value="9">9</option>
                                 <option value="10">10</option>
-                                </select>
+                            </select>
                         </div>
                     </div>
-
-                        <button type="button" id=order>Rendelés leadása</button>
-                        <span id=value>1200 Ft</span>
+                    <div>
+                         A rendelés értéke:<span class="show-price"></span> Ft
+                    <button onclick="calcPrice()" type="button" class="btn btn-primary">Rendelés leadása</button>
+                    </div>
+                   
+                   
                 </fieldset>
             </form>
         </div>
     </div>
 
-
-
-
-
-    </div>
-
+<script src="../js/price.js"></script>
 </body>
 
 </html>
