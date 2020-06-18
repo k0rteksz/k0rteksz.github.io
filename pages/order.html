@@ -46,33 +46,34 @@
                         <div class="form-group">
                             <label for="comment" class="col-sm-1 col-form-label">Megjegyzés</label>
                             <div class="col-xl-12">
-                                <textarea class="form-control" name="comment" rows="5" required></textarea>
+                                <textarea class="form-control" id="comment" name="comment" rows="5" required></textarea>
                             </div>
                         </div>
                         <span>Extra feltét:</span>
-                            <div class="form-check">
-                                <input class="form-check-input" name="extra" id="nothing" type="checkbox" value="0">
-                                <label class="form-check-label" for="nothing">Nem kérek feltétet.</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" name="extra" id="cheese" type="checkbox" value="300">
-                                <label class="form-check-label" for="cheese" >sajt</label>
-                            </div>
+                        <div class="form-check">
+                            <input class="form-check-input" name="extra" id="nothing" type="checkbox" value="0">
+                            <label class="form-check-label" for="nothing">Nem kérek feltétet.</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" name="extra" id="cheese" type="checkbox" value="300">
+                            <label class="form-check-label" for="cheese">sajt</label>
+                        </div>
                         <div class="form-check">
                             <input class="form-check-input" name="extra" id="bacon" type="checkbox" value="400">
-                            <label class="form-check-label" for="bacon" >bacon</label>
+                            <label class="form-check-label" for="bacon">bacon</label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" name="extra" id="double-meat" type="checkbox" value="1000">
-                            <label class="form-check-label" for="double-meat" >dupla hús</label>
+                            <label class="form-check-label" for="double-meat">dupla hús</label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" name="extra" id="cheesAndBacon" type="checkbox" value="700">
-                            <label class="form-check-label" for="cheesAndBacon" >sajt én bacon együtt</label>
+                            <label class="form-check-label" for="cheesAndBacon">sajt én bacon együtt</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" name="extra" id="cheessAndDouble" type="checkbox" value="1300">
-                            <label class="form-check-label" for="cheessAndDouble" >sajt és dupla hús együtt</label>
+                            <input class="form-check-input" name="extra" id="cheessAndDouble" type="checkbox"
+                                value="1300">
+                            <label class="form-check-label" for="cheessAndDouble">sajt és dupla hús együtt</label>
                         </div>
                         <div class="form-group">
                             <label class="label label-block" for="sauce">Szósz:</label>
@@ -83,22 +84,24 @@
                         </div>
                         <div>
                             <label class="label label-block" for="quantity">Mennyiség</label>
-                            <input class="form-control" id="quantity" name="quantity" type="text" min="1" max="10" value="1" required>
-                            
+                            <input class="form-control" id="quantity" name="quantity" type="number" min="1" max="10"
+                                value="1" required>
+
                         </div>
                     </div>
                     <div class="form-group">
-                         <span id=orderValue>A rendelés értéke:</span> <span id=message class="show-price"></span> Ft
-                    <button onclick="sendOrderData()" type="button" class="btn btn-primary">Rendelés leadása</button>
+                        <span id=orderValue>A rendelés értéke:</span> <span id=message class="show-price"></span> Ft
+                        <button onclick="sendOrderData()" type="button" class="btn btn-primary">Rendelés
+                            leadása</button>
                     </div>
-                   
-                   
+
+
                 </fieldset>
             </form>
         </div>
     </div>
 
-<script src="../js/price.js"></script>
+    <script src="../js/price.js"></script>
 </body>
 
 </html>
