@@ -150,3 +150,7 @@ table,th,td {
 #order {
     color: green;
 }
+
+#orderValue {
+    color: green;
+}

@@ -50,10 +50,14 @@
                             </div>
                         </div>
                         <span>Extra feltét:</span>
-                        <div class="form-check">
-                            <input class="form-check-input" name="extra" id="cheese" type="checkbox" value="300">
-                            <label class="form-check-label" for="cheese" >sajt</label>
-                        </div>
+                            <div class="form-check">
+                                <input class="form-check-input" name="extra" id="nothing" type="checkbox" value="0">
+                                <label class="form-check-label" for="nothing">Nem kérek feltétet.</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" name="extra" id="cheese" type="checkbox" value="300">
+                                <label class="form-check-label" for="cheese" >sajt</label>
+                            </div>
                         <div class="form-check">
                             <input class="form-check-input" name="extra" id="bacon" type="checkbox" value="400">
                             <label class="form-check-label" for="bacon" >bacon</label>
@@ -70,34 +74,22 @@
                             <input class="form-check-input" name="extra" id="cheessAndDouble" type="checkbox" value="1300">
                             <label class="form-check-label" for="cheessAndDouble" >sajt és dupla hús együtt</label>
                         </div>
-                        <div>
-                            <label for="sauce">Szósz:</label>
-                            <select class="custom-select" id="sauce" name="sauce">
-                                <option selected>Válassz szószt!</option>
-                                <option value="standard" value="0">hagyományos</option>
-                                <option value="hot" value="100">csípős</option>
+                        <div class="form-group">
+                            <label class="label label-block" for="sauce">Szósz:</label>
+                            <select class="form-control" id="sauce" name="sauce">
+                                <option value="0" selected>hagyományos</option>
+                                <option value="100">csípős (+100 Ft)</option>
                             </select>
                         </div>
                         <div>
-                            <label for="count">Mennyiség</label>
-                            <select class="custom-select" id="count" name="count">
-                                <option selected disabled value="0">Mennyi szeretnél rendelni?</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                                <option value="10">10</option>
-                            </select>
+                            <label class="label label-block" for="quantity">Mennyiség</label>
+                            <input class="form-control" id="quantity" name="quantity" type="text" min="1" max="10" value="1" required>
+                            
                         </div>
                     </div>
                     <div class="form-group">
-                         A rendelés értéke:<span class="show-price"></span> Ft
-                    <button onclick="calcPrice()" type="button" class="btn btn-primary">Rendelés leadása</button>
+                         <span id=orderValue>A rendelés értéke:</span> <span id=message class="show-price"></span> Ft
+                    <button onclick="sendOrderData()" type="button" class="btn btn-primary">Rendelés leadása</button>
                     </div>
                    
                    
