@@ -1,4 +1,4 @@
-function validate () {
+function validate() {
     const name = document.querySelector("#name").value.trim();
     const email = document.querySelector("#email").value.trim();
     const address = document.querySelector("#address").value.trim();
@@ -7,15 +7,14 @@ function validate () {
     const extra = parseInt(document.querySelector('[name=extra]:checked').value, 10);
     const sauce = parseInt(document.querySelector('#sauce').value, 10);
     const quantity = parseInt(document.querySelector('#quantity').value, 10);
-    calculatePrice(extra,sauce,quantity);
+    calculatePrice(extra, sauce, quantity);
     if (personalValidate(name, email, address, comment) && quantityValidate(quantity)) {
-        message.innerHTML=price;
+        message.innerHTML = price;
         return false;
     }
 }
 
-
-function personalValidate (name, email, address, comment) {
+function personalValidate(name, email, address, comment) {
     if (!name) {
         alert("A név megadása kötelező!");
         return false;
@@ -31,22 +30,22 @@ function personalValidate (name, email, address, comment) {
     if (comment.indexOf("<") >= 0 && comment.indexOf(">") >= 0) {
         alert("Nem megengedett karaktert tartalmaz!");
         return false;
-     } 
-        return true;
-}
-
-function quantityValidate (quantity) {
-    if (quantity > 10 || quantity < 1 || isNaN(quantity)) {
-        alert("Minimum 1 és maximum 10 db terméket vásárolhat!");
-        return false;
-     }
+    }
     return true;
 }
 
-function calculatePrice (extra, sauce, quantity) {
+function quantityValidate(quantity) {
+    if (quantity > 10 || quantity < 1 || isNaN(quantity)) {
+        alert("Minimum 1 és maximum 10 db terméket vásárolhat!");
+        return false;
+    }
+    return true;
+}
+
+function calculatePrice(extra, sauce, quantity) {
     price = (1200 + extra + sauce) * quantity;
-     if (price < 5000) {
-         price += 500;
-     }
+    if (price < 5000) {
+        price += 500;
+    }
     return price;
 }
