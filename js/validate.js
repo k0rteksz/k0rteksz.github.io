@@ -7,11 +7,13 @@ function validate () {
     const extra = parseInt(document.querySelector('[name=extra]:checked').value, 10);
     const sauce = parseInt(document.querySelector('#sauce').value, 10);
     const quantity = parseInt(document.querySelector('#quantity').value, 10);
-    personalValidate(name, email, address, comment);
-    quantityValidate(quantity);
-    calculatePrice(extra, sauce, quantity);
-    message.innerHTML=price;
+    calculatePrice(extra,sauce,quantity);
+    if (personalValidate(name, email, address, comment) && quantityValidate(quantity)) {
+        message.innerHTML=price;
+        return false;
+    }
 }
+
 
 function personalValidate (name, email, address, comment) {
     if (!name) {
