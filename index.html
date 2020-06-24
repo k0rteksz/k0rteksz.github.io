@@ -10,9 +10,31 @@
     <title>Nagyfalat</title>
 </head>
     
-<body style="background-color: yellow;">
+<body onunload="weatherWidget()" style="background-color: yellow;">
     <div class="oldal">
-        <div class="linksHead">
+        <div class="col-xl-12 weather">
+            <form class="col-sm-4 form-inline" role="form">
+            <div class="col-sm-8 form-group">
+                <label class="w1 label-block" for="days">Időjárás</label>
+                <div class="input-group">
+                <select class="form-control mr-2" id="days" name="days">
+                    <option value="0" selected>Hétfő</option>
+                    <option value="1">Kedd</option>
+                    <option value="2">Szerda</option>
+                    <option value="3">Csütörtök</option>
+                    <option value="4">Péntek</option>
+                    <option value="5">Szombat</option>
+                    <option value="6">Vasárnap</option>
+                </select>
+                <span class="input-group-btn">
+                <button onclick="weatherWidget()" type="button" class="btn btn-warning">Mutasd</button>
+                </span>
+                </div>
+            </div>
+            </form>
+            <span class="col row-justify-end" id=temp ></span>
+        </div>
+        <div class="linksHead col-sm-12">
             <a href="index.html">Home</a>
             <a href="pages/products.html">Products</a>
             <a href="pages/akciok.html">Akciók</a>
@@ -21,6 +43,8 @@
         </div>
         <h1 id="index">Üdvözöljük a Nagyfalat kézműveshamburger étterem honlapján!</h1>
     </div>
+<script src="js/weather.js"></script>
+
 </body>
 
 </html>
