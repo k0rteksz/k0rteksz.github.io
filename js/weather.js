@@ -5,3 +5,6 @@ function weatherWidget() {
     const temperatureDiv = document.querySelector('#temp');
     temperatureDiv.innerHTML = temperatures[day] + '&deg;C';
 }
+window.onload = function() {
+    weatherWidget();
+  };
