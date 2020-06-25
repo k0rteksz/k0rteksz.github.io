@@ -99,9 +99,10 @@ p {
 
 
 .kepek {
-    overflow: auto;
     margin: 0 10px;
     float: right;
+    display: flex;
+    width: 150px;
     
 }
 
