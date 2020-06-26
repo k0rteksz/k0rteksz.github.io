@@ -6,3 +6,15 @@ function calcAmount() {
 
     showAmount.innerHTML=amount;
 }
+
+function weatherWidget() {
+    const day = document.querySelector('#days').value;
+    const temperatureDiv = document.querySelector('#temp');
+    temperatureDiv.innerHTML = temperatures[day] + '&deg;C';
+    for (let i = 0; i < temperatureUpperLimits.length; i++ ) {
+        if (temperatures[day] <= temperatureUpperLimits[i]) {
+            temperatureDiv.innerHTML += "<br>" + offers[i];
+            break;
+        }
+    }
+}
