@@ -11,33 +11,49 @@
 </head>
 
 <body style="background-color: aliceblue;">
-<header class="weather">
-    <div class="row flex-nowrap justify-content-between align-items-center">
-        <form class="col-4 pt-1" role="form">
-            <label class="w1 label-block" for="days">Időjárás</label>
-            <div class="input-group">
-                <select class="form-control col-sm-4 mr-4" id="days" name="days">
-                    <option value="0" selected>Hétfő</option>
-                    <option value="1">Kedd</option>
-                    <option value="2">Szerda</option>
-                    <option value="3">Csütörtök</option>
-                    <option value="4">Péntek</option>
-                    <option value="5">Szombat</option>
-                    <option value="6">Vasárnap</option>
-                </select>
-                <a class="input-group-btn">
-                    <button onclick="weatherWidget()" type="button" class="btn btn-warning btn-md">Mutasd</button>
-                </a>
+    <header class="weather">
+        <div class="conatiner">
+            <div class="row flex-nowrap justify-content-between align-items-center">
+                <form class="col-4 pt-1" role="form">
+                    <label class="w1 label-block" for="days">Időjárás</label>
+                    <div class="input-group">
+                        <select class="form-control col-sm-4 mr-4" id="days" name="days">
+                            <option value="0" selected>Hétfő</option>
+                            <option value="1">Kedd</option>
+                            <option value="2">Szerda</option>
+                            <option value="3">Csütörtök</option>
+                            <option value="4">Péntek</option>
+                            <option value="5">Szombat</option>
+                            <option value="6">Vasárnap</option>
+                        </select>
+                        <a class="input-group-btn">
+                            <button onclick="weatherWidget()" type="button" class="btn btn-warning btn-md">Mutasd
+                            </button>
+                        </a>
+                    </div>
+
+                </form>
+                <div class="col-4 d-flex justify-content-end align-items-center" id=temp>
+                </div>
             </div>
+            <div class="row row-cols-3">
+                <div class="col">
+                    <p id="min">
+                    </p>
+                </div>
+                <div class="col">
+                    <p id="max">
+                    </p>
+                </div>
+                <div class="col">
+                    <p id="avg"></p>
+                </div>
+            </div>
+        </div>
 
-        </form>
-        <div class="col-4 d-flex justify-content-end align-items-center" id=temp>
-    </div>
 
-
-</header>
-</div>
-<script src="../js/weather.js"></script>
+    </header>
+    <script src="../js/weather.js"></script>
 
 </body>
 

@@ -21,4 +21,44 @@ function weatherWidget() {
 
 window.onload = function () {
     weatherWidget();
-};
+    minimumTemp();
+    maximumTemp();
+    averageTemp();
+}
+
+function minimumTemp() {
+    let minimum = temperatures.length != 0 ? temperatures[0] : 0;
+    let minP = document.querySelector('#min');  
+    minP.innerHTML = "Minimum: " + minimum;
+    for (let i = 0; i < temperatures.length; i++) {
+        if (temperatures[i] < minimum) {
+            minimum = temperatures[i];
+        }
+        
+    }
+    return minimum;
+    
+}
+function maximumTemp() {
+    let maximum = temperatures.length != 0 ? temperatures[0] : 0;
+    let maxP = document.querySelector('#max');  
+    maxP.innerHTML = "Maximum: " + maximum;
+    for (let i = 0; i < temperatures.length; i++) {
+        if (temperatures[i] > maximum) {
+            maximum = temperatures[i];
+        }
+        
+    }
+    return maximum;
+    
+}
+
+function averageTemp() {
+    let avg = 0;
+    let avgP = document.querySelector('#avg');
+    for (let i = 0; i < temperatures.length; i++) {
+        avg += temperatures[i];
+        
+    }
+    return avgP.innerHTML ="Átlag: " + parseInt(temperatures.length != 0 ? avg / temperatures.length : 0);
+}
