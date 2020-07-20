@@ -1,4 +1,4 @@
-var temperatures = [11.2, 14.4, 13.0, 17.3, 16.9, 18.2, 16.5];
+/* var temperatures = [11.2, 14.4, 13.0, 17.3, 16.9, 18.2, 16.5];
 var temperatureUpperLimits = [0, 15, 20, 25, 30];
 var offers = ["Ma forró csokit is árusítunk!",
     "Melegedj át egy teával nálunk!",
@@ -6,33 +6,57 @@ var offers = ["Ma forró csokit is árusítunk!",
     "Ma fagyit is kínálunk!",
     "Hűsítsd le magad egy jéghideg limonádéval!"]
 
-function weatherWidget() {
-    const day = document.querySelector('#days').value;
-    const temperaturesDiv = document.querySelector('#temp');
-    temperaturesDiv.innerHTML = temperatures[day] + '&deg;C';
-    for (i=0; i < temperatureUpperLimits.length; i++) {
-        if (temperatures[day] <= temperatureUpperLimits[i]){
-            temperaturesDiv.innerHTML += '<br>' + offers[i];
-            break;
-        }
-    }
-
-}
-
-window.onload = function () {
+ */
+/*window.onload = function () {
     weatherWidget();
     minimumTemp();
     maximumTemp();
     averageTemp();
 }
+*/
+
+var data = getWeatherData();
+
+function weatherWidget() {
+    const day = document.querySelector('#days').value;
+    const temperaturesDiv = document.querySelector('#temp');
+    const temperature = findWeather(day).temperature;
+    const offerMessage = findOffer(temperature).offerMessage;
+    temperaturesDiv.innerHTML = temperature + '&deg;C';
+    temperaturesDiv.innerHTML += '<br><span class="offer">' + offerMessage + '</span>';
+    displayminimumTemp();
+    displayaverageTemp();
+    displaymaximumTemp();
+    
+        }
+
+function findWeather(day) {
+    for (let weather of data.weathers) {
+        if (weather.dayNumber == day) {
+            return weather;
+        }
+    }
+}
+
+function findOffer(temperature) {
+    for (let offer of data.offers) {
+        if (temperature <= offer.upperLimit) {
+            return offer;
+            
+        }
+    }
+}
+
+
+
 
 function minimumTemp() {
-    let minimum = temperatures.length != 0 ? temperatures[0] : 0;
+    let minimum = data.weathers.length != 0 ? data.weathers[0].temperature : 0;
     let minP = document.querySelector('#min');  
     minP.innerHTML = "Minimum: " + minimum;
-    for (let i = 0; i < temperatures.length; i++) {
-        if (temperatures[i] < minimum) {
-            minimum = temperatures[i];
+    for (let i = 0; i < data.weathers.length; i++) {
+        if (data.weathers[i].temperature < minimum) {
+            minimum = data.weathers[i].temperature;
         }
         
     }
@@ -40,12 +64,12 @@ function minimumTemp() {
     
 }
 function maximumTemp() {
-    let maximum = temperatures.length != 0 ? temperatures[0] : 0;
+    let maximum = data.weathers.length != 0 ? data.weathers[0].temperature : 0;
     let maxP = document.querySelector('#max');  
     maxP.innerHTML = "Maximum: " + maximum;
-    for (let i = 0; i < temperatures.length; i++) {
-        if (temperatures[i] > maximum) {
-            maximum = temperatures[i];
+    for (let i = 0; i < data.weathers.length; i++) {
+        if (data.weathers[i].temperature > maximum) {
+            maximum = data.weathers[i].temperature;
         }
         
     }
@@ -56,9 +80,11 @@ function maximumTemp() {
 function averageTemp() {
     let avg = 0;
     let avgP = document.querySelector('#avg');
-    for (let i = 0; i < temperatures.length; i++) {
-        avg += temperatures[i];
+    for (let i = 0; i < data.weathers.length; i++) {
+        avg += datam.weathers[i].temperature;
         
     }
-    return avgP.innerHTML ="Átlag: " + parseInt(temperatures.length != 0 ? avg / temperatures.length : 0);
+    return avgP.innerHTML ="Átlag: " + parseInt(data.weathers.length != 0 ? avg / data.weathers.length : 0);
 }
+
+
