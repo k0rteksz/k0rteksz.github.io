@@ -20,86 +20,101 @@
             <a href="about.html">About</a>
             <a href="order.html">Order</a>
         </div>
-        <div class="container col-sm-3 col align-self-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4">
 
-            <form>
-                <fieldset>
-                    <legend style="text-align: center;">Rendelés adatai</legend>
-                    <div>
-                        <div class="form-group">
-                            <label for="name" class="col-sm-1 col-form-label">Név:*</label>
+                    <form>
+                        <fieldset>
+                            <legend style="text-align: center;">Rendelés adatai</legend>
                             <div>
-                                <input type="text" class="form-control" id="name" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="col-sm-1 col-form-label">Email:*</label>
-                            <div>
-                                <input type="email" class="form-control" id="email" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="address" class="col-sm-1 col-form-label">Cím:*</label>
-                            <div>
-                                <input type="text" class="form-control" id="address" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="comment" class="col-sm-1 col-form-label">Megjegyzés</label>
-                            <div>
-                                <textarea class="form-control" id="comment" name="comment" rows="5" required></textarea>
-                            </div>
-                        </div>
-                        <span>Extra feltét:</span>
-                        <div class="form-check">
-                            <input class="form-check-input" name="extra" id="nothing" type="radio" value="0" checked>
-                            <label class="form-check-label" for="nothing">Nem kérek feltétet.</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" name="extra" id="cheese" type="radio" value="300">
-                            <label class="form-check-label" for="cheese">Sajt (+300 Ft)</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" name="extra" id="bacon" type="radio" value="400">
-                            <label class="form-check-label" for="bacon">Bacon (+400 Ft)</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" name="extra" id="double-meat" type="radio" value="1000">
-                            <label class="form-check-label" for="double-meat">Dupla hús (+1000 Ft)</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" name="extra" id="cheesAndBacon" type="radio" value="700">
-                            <label class="form-check-label" for="cheesAndBacon">Sajt és bacon együtt (+700 Ft)</label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" name="extra" id="cheessAndDouble" type="radio"
-                                value="1300">
-                            <label class="form-check-label" for="cheessAndDouble">Sajt és dupla hús együtt (+1300 Ft)</label>
-                        </div>
-                        <div class="form-group">
-                            <label class="label label-block" for="sauce">Szósz:</label>
-                            <select class="form-control" id="sauce" name="sauce">
-                                <option value="0" selected>hagyományos</option>
-                                <option value="100">csípős (+100 Ft)</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="label label-block" for="quantity">Mennyiség</label>
-                            <input class="form-control" id="quantity" name="quantity" type="number" min="1" max="10"
-                                value="1" required>
-                                <small class="form-text text-muted">
-                                    Minimum 1, maximum 10 db.
-                                </small>
+                                <div class="form-group">
+                                    <label for="name">Név:*</label>
+                                    
+                                        <input type="text" class="form-control" id="name" required placeholder="Enter your name">
+                                    
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email:*</label>
+                                    <input type="email" class="form-control" id="email" required placeholder="Enter e-mail address" > 
+                                    <small id=emailHelp class="form-text text-muted">We'll never share your email address with anyone else.</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="address">Cím:*</label>
+                                    
+                                        <input type="text" class="form-control" id="address" required placeholder="Enter your address">
+                                    
+                                </div>
+                                <div class="form-group">
+                                    <label for="comment">Megjegyzés</label>
+                                  
+                                        <textarea class="form-control" id="comment" name="comment" rows="5"
+                                            required placeholder="ex: phone number, staircase, no-cheese!, etc..."></textarea>
+                                    
+                                </div>
+                                <span>Extra feltét:</span>
+                                <div class="form-check">
+                                    <input class="form-check-input" name="extra" id="nothing" type="radio" value="0"
+                                        checked>
+                                    <label class="form-check-label" for="nothing">Nem kérek feltétet.</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" name="extra" id="cheese" type="radio" value="300">
+                                    <label class="form-check-label" for="cheese">Sajt (+300 Ft)</label> 
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" name="extra" id="bacon" type="radio" value="400">
+                                    <label class="form-check-label" for="bacon">Bacon (+400 Ft)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" name="extra" id="double-meat" type="radio"
+                                        value="1000">
+                                    <label class="form-check-label" for="double-meat">Dupla hús (+1000 Ft)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" name="extra" id="cheesAndBacon" type="radio"
+                                        value="700">
+                                    <label class="form-check-label" for="cheesAndBacon">Sajt és bacon együtt (+700
+                                        Ft)</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" name="extra" id="cheessAndDouble" type="radio"
+                                        value="1300">
+                                    <label class="form-check-label" for="cheessAndDouble">Sajt és dupla hús együtt
+                                        (+1300
+                                        Ft)</label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="label label-block" for="sauce">Szósz:</label>
+                                    <select class="form-control" id="sauce" name="sauce">
+                                        <option value="0" selected>hagyományos</option>
+                                        <option value="100">csípős (+100 Ft)</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="label label-block" for="quantity">Mennyiség</label>
+                                    <input class="form-control" id="quantity" name="quantity" type="number" min="1"
+                                        max="10" value="1" required>
+                                    <small class="form-text text-muted">
+                                        Minimum 1, maximum 10 db.
+                                    </small>
 
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <span id=orderValue>A rendelés értéke:</span> <span id=message class="show-price"></span> Ft
-                        <button onclick="validate()" type="button" class="btn btn-primary">Rendelés
-                            leadása</button>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <span id=orderValue>A rendelés értéke:</span> <span id=message
+                                    class="show-price"></span> Ft
+                                <button onclick="validate()" type="button" class="btn btn-primary">Rendelés
+                                    leadása</button>
+                            </div>
 
-                </fieldset>
-            </form>
+                        </fieldset>
+                    </form>
+                </div>
+                <div class="col-4"></div>
+            </div>
+
         </div>
     </div>
     <script src="../js/weather.js"></script>
